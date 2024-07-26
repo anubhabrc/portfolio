@@ -1,9 +1,5 @@
 import { useEffect } from "react";
 import hirely from "../../assets/images/Hirely.png";
-import easyStaff from "../../assets/images/EasyStaff.png";
-import formify from "../../assets/images/Formify.png";
-import bloggy from "../../assets/images/Bloggy.png";
-import planitio from "../../assets/images/Planitio.png";
 import learningCafe from "../../assets/images/LearningCafe.png";
 import { BsGithub, BsArrowRight } from "react-icons/bs";
 import gsap from "gsap";
@@ -113,8 +109,9 @@ const Projects = () => {
 
   return (
     <div
-      className="w-full  pb-40 xl:px-44 lg:px-36 md:px-32 sm:px-28 vvs:px-12 px-10"
+      className="w-full   pb-40 xl:px-44 lg:px-36 md:px-32 sm:px-28 vvs:px-12 px-10"
       id="projects"
+      
     >
       <h1
         id="project-heading"
