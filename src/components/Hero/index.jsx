@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import profilePhoto from "../../assets/images/anubhab.jpeg";
+import profilePhoto from "../../assets/images/anubhab2.jpeg";
 import Tooltip from "@mui/material/Tooltip";
 import { Fade } from "@mui/material";
 import { motion } from "framer-motion";
@@ -66,7 +66,7 @@ const Hero = () => {
                   alt="Anubhab Roy Chowdhury"
                   onClick={handlePhrases}
                   id="profilePhoto"
-                  className="rounded-full !z-10 lg:h-20 lg:w-20 md:h-16 md:w-16 vvs:h-14 vvs:w-14 w-12 h-12 hover:scale-[1.05] hover:shadow-custom1 hover:-rotate-12 transition-all duration-300 ease-in-out cursor-pointer"
+                  className="rounded-full !z-10 lg:h-32 lg:w-32 md:h-16 md:w-16 vvs:h-14 vvs:w-14 w-12 h-12 hover:scale-[1.05] hover:shadow-custom1 hover:-rotate-12 transition-all duration-300 ease-in-out cursor-pointer"
                 />
               </div>
             </Tooltip>
