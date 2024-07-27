@@ -7,7 +7,7 @@ import { motion } from "framer-motion";
 const FloatingIcons = () => {
   return (
     <div className="z-[10] flex justify-between w-full items-center my-14">
-      <a href="mailto:tarunsharma8920@gmail.com" className="social">
+      <a href="mailto:anubhab362@gmail.com" target="_blank" className="social">
         <motion.span
           animate={{ opacity: 1, scale: 1 }}
           initial={{ opacity: 0, scale: 0 }}
@@ -44,7 +44,7 @@ const FloatingIcons = () => {
           </motion.span>
         </motion.span>
       </a>
-      <a href="https://github.com/tarunfy" target="_blank" className="social">
+      <a href="https://github.com/anubhabrc" target="_blank" className="social">
         <motion.span
           animate={{ opacity: 1, scale: 1 }}
           initial={{ opacity: 0, scale: 0 }}
@@ -82,7 +82,7 @@ const FloatingIcons = () => {
         </motion.span>
       </a>
       <a
-        href="https://linkedin.com/in/tarunfy/"
+        href="https://linkedin.com/in/anubhabrc/"
         target="_blank"
         className="social"
       >

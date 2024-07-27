@@ -1,8 +1,8 @@
 import { useEffect } from "react";
 import gsap from "gsap";
 import { BsFileEarmarkPdf, BsGithub } from "react-icons/bs";
-import { FiTwitter } from "react-icons/fi";
-import { AiOutlineInstagram } from "react-icons/ai";
+import { MdOutlineEmail } from "react-icons/md";
+import { FaLinkedin } from "react-icons/fa";
 import resume from "../../assets/file/resume.pdf";
 
 const Contact = () => {
@@ -77,25 +77,25 @@ const Contact = () => {
       <div className="flex flex-col py-2 mb-5 w-full space-y-6 items-center justify-center">
         <div className="divide-x divide-solid divide-white/50 grid grid-cols-3 w-full">
           <a
-            href="https://instagram.com/tarunfy"
+            href="https://linkedin.com/in/anubhabrc/"
             target="_blank"
             className="flex items-center justify-center flex-col text-lg text-white"
           >
-            <AiOutlineInstagram className="social-icon h-7 w-7 sm:h-8 sm:w-8 xl:h-9 xl:w-9 2xl:h-10 2xl:w-10" />
+            <FaLinkedin className="social-icon h-7 w-7 sm:h-8 sm:w-8 xl:h-9 xl:w-9 2xl:h-10 2xl:w-10" />
           </a>
           <a
-            href="https://github.com/tarunfy"
+            href="https://github.com/anubhabrc"
             target="_blank"
             className="flex items-center justify-center flex-col text-lg text-white"
           >
             <BsGithub className="social-icon h-7 w-7 sm:h-8 sm:w-8 xl:h-9 xl:w-9 2xl:h-10 2xl:w-10" />
           </a>
           <a
-            href="https://twitter.com/tarunfy"
+            href="mailto:anubhab362@gmail.com"
             target="_blank"
             className="flex items-center justify-center flex-col text-lg text-white"
           >
-            <FiTwitter className="social-icon h-7 w-7 sm:h-8 sm:w-8 xl:h-9 xl:w-9 2xl:h-10 2xl:w-10" />
+            <MdOutlineEmail className="social-icon h-7 w-7 sm:h-8 sm:w-8 xl:h-9 xl:w-9 2xl:h-10 2xl:w-10" />
           </a>
         </div>
       </div>

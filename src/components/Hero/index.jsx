@@ -21,17 +21,15 @@ const phrases = [
 ];
 
 const letters = [
-  "I'm",
-  "developing",
-  "Creative",
-  "&",
-  "Interactive",
-  "webapps",
-  "🚀",
-
+  "Software",
+  "Engineering,",
+  "Psychology,",
+  "and",
+  "Tennis",
+  "🚀"
 ];
 
-const title = ["Hello!", "I'm", "Anubhab"];
+const title = ["Hey!", "I'm", "Anubhab"];
 
 const Hero = () => {
   const [index, setIndex] = useState(0);
@@ -74,7 +72,7 @@ const Hero = () => {
         </motion.div>
 
         <div >
-          <div className="mt-5 mb-80">
+          <div className="mt-5 mb-72">
             <h1 className="text-white/70 font-Glimer-Outlined !z-10 2xl:text-[6.5rem] xl:text-[6.2rem] lg:text-[5rem] md:text-[3.5rem] sm:text-[3rem] vvs:text-[2.3rem] text-[2.2rem] tracking-normal xl:leading-[120px] md:leading-[80px] lg:leading-[100px] sm:leading-[80px] vvs:leading-[60px] leading-[40px]">
               <AnimatedLetters letters={title} />
             </h1>

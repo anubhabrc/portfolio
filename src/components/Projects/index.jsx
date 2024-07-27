@@ -1,6 +1,6 @@
 import { useEffect } from "react";
-import hirely from "../../assets/images/Hirely.png";
-import learningCafe from "../../assets/images/LearningCafe.png";
+import Yubi from "../../assets/images/Yubi.png";
+import kiwi from "../../assets/images/kiwi.png";
 import { BsGithub, BsArrowRight } from "react-icons/bs";
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
@@ -10,6 +10,7 @@ gsap.registerPlugin(ScrollTrigger);
 const Projects = () => {
   useEffect(() => {
     let containers = document.querySelectorAll(".container");
+     
 
     containers.forEach((container) => {
       const imgContainer = container.querySelector(".img-container");
@@ -109,7 +110,7 @@ const Projects = () => {
 
   return (
     <div
-      className="w-full   pb-40 xl:px-44 lg:px-36 md:px-32 sm:px-28 vvs:px-12 px-10"
+      className="w-full  pb-40 xl:px-44 lg:px-36 md:px-32 sm:px-28 vvs:px-12 px-10"
       id="projects"
       
     >
@@ -119,27 +120,28 @@ const Projects = () => {
       >
         Featured Projects
       </h1>
+      
       <div className="sm:space-y-40 space-y-32 xl:space-y-[35vh] z-30">
         {/* LearningCafe */}
         <div className="container lg:space-x-2 flex flex-col lg:flex-row lg:justify-between lg:items-center items-start invisible">
           <div className="lg:h-[400px] 2xl:h-[500px] h-[250px] sm:h-[300px] md:h-[350px] w-full relative overflow-hidden img-wrapper">
             <img
-              src={learningCafe}
+              src={kiwi}
               alt="project image"
               className="absolute w-full object-cover h-full img"
             />
             <div className="img-container absolute top-0 right-0 bg-[#000000] w-full h-full"></div>
+            
           </div>
 
           <div className="text-container text-white lg:space-y-4 space-y-2 md:space-y-3 sm:space-y-3">
             <h1 className="hidden-text font-bold font-Glimer-Bold cursor-default lg:text-4xl text-2xl sm:text-3xl 2xl:text-5xl lg:mt-0 mt-5">
               <div className="content-line flex lg:justify-end items-center m-0 lg:h-[52px] 2xl:h-[60px] overflow-hidden">
-                <div className="content-line-inner">Learning Cafe</div>
+                <div className="content-line-inner">Kiwi</div>
               </div>
             </h1>
             <p className="font-normal cursor-default font-Glimer-Light text-white/90 xl:text-2xl  sm:text-xl 2xl:text-3xl vvs:text-base text-sm lg:text-right">
-              A platform for posting courses which are designed as per the
-              Industry demand with full Career Assistance.
+              A platform where you connect with people for real-time video calls and chat along with a collaborative whiteboard.
             </p>
             <div className="btn-row flex justify-start space-x-6 items-center lg:justify-end">
               <div className="github-btn">
@@ -169,12 +171,11 @@ const Projects = () => {
           <div className="text-container text-white lg:space-y-4 space-y-2 md:space-y-3 sm:space-y-3 ">
             <h1 className="hidden-text font-bold font-Glimer-Bold cursor-default lg:text-4xl text-2xl sm:text-3xl 2xl:text-5xl lg:mt-0 mt-5">
               <div className="content-line flex items-center m-0 lg:h-[52px] 2xl:h-[60px] overflow-hidden">
-                <div className="content-line-inner">Hirely</div>
+                <div className="content-line-inner">Yubi</div>
               </div>
             </h1>
             <p className="font-normal cursor-default font-Glimer-Light text-white/90 xl:text-2xl sm:text-xl 2xl:text-3xl vvs:text-base text-sm">
-              Hirely is a platform where candidates can get hired by the
-              recruiters from different upcoming starups.
+              A third-party YouTube video upload automation tool streamlining workflows for remote content creators.
             </p>
             <div className="btn-row flex justify-start space-x-6 items-center">
               <div className="github-btn">
@@ -200,7 +201,7 @@ const Projects = () => {
 
           <div className="lg:h-[400px] 2xl:h-[500px] h-[250px] sm:h-[300px] md:h-[350px] w-full relative overflow-hidden img-wrapper">
             <img
-              src={hirely}
+              src={Yubi}
               alt="project image"
               className="absolute w-full object-cover h-full img"
             />
