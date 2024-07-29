@@ -148,7 +148,7 @@ const Projects = () => {
                 <a
                   className="icon "
                   target="_blank"
-                  href="https://github.com/tarunfy/learningcafe"
+                  href="https://github.com/anubhabrc/kiwi-client"
                 >
                   <BsGithub className="lg:h-8 lg:w-8 2xl:h-9 2xl:w-9 vvs:h-6 vvs:w-6 sm:w-7 sm:h-7 h-5 w-5 hover:-translate-y-1 transition duration-200  ease-in-out repo text-white/90 hover:text-white" />
                 </a>
@@ -157,7 +157,7 @@ const Projects = () => {
                 <a
                   className="icon"
                   target="_blank"
-                  href="https://learningcafe.co.in/"
+                  //href="https://learningcafe.co.in/"
                 >
                   <BsArrowRight className="link lg:h-8 lg:w-8 2xl:h-9 2xl:w-9 vvs:h-6 vvs:w-6 sm:w-7 sm:h-7 h-5 w-5 hover:-rotate-[45deg] hover:text-white transition duration-200 ease-in-out text-white/90" />
                 </a>
@@ -182,7 +182,7 @@ const Projects = () => {
                 <a
                   className="icon "
                   target="_blank"
-                  href="https://github.com/tarunfy/Hirely"
+                  //href="https://github.com/tarunfy/Hirely"
                 >
                   <BsGithub className="lg:h-8 lg:w-8 2xl:h-9 2xl:w-9 vvs:h-6 vvs:w-6 sm:w-7 sm:h-7 h-5 w-5 hover:-translate-y-1 transition duration-200  ease-in-out repo text-white/90 hover:text-white" />
                 </a>
@@ -191,7 +191,7 @@ const Projects = () => {
                 <a
                   className="icon"
                   target="_blank"
-                  href="https://hirely.vercel.app/"
+                  //href="https://hirely.vercel.app/"
                 >
                   <BsArrowRight className="link lg:h-8 lg:w-8 2xl:h-9 2xl:w-9 vvs:h-6 vvs:w-6 sm:w-7 sm:h-7 h-5 w-5 hover:-rotate-[45deg] hover:text-white transition duration-200 ease-in-out text-white/90" />
                 </a>
