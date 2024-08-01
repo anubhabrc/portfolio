@@ -141,14 +141,14 @@ const Projects = () => {
               </div>
             </h1>
             <p className="font-normal cursor-default font-Glimer-Light text-white/90 xl:text-2xl  sm:text-xl 2xl:text-3xl vvs:text-base text-sm lg:text-right">
-              A platform where you connect with people for real-time video calls and chat along with a collaborative whiteboard.
+              A video conferencing platform with features like screen sharing, meeting scheduling, and recording capabilities.
             </p>
             <div className="btn-row flex justify-start space-x-6 items-center lg:justify-end">
               <div className="github-btn">
                 <a
                   className="icon "
                   target="_blank"
-                  href="https://github.com/anubhabrc/kiwi-client"
+                  href="https://github.com/anubhabrc/Kiwi"
                 >
                   <BsGithub className="lg:h-8 lg:w-8 2xl:h-9 2xl:w-9 vvs:h-6 vvs:w-6 sm:w-7 sm:h-7 h-5 w-5 hover:-translate-y-1 transition duration-200  ease-in-out repo text-white/90 hover:text-white" />
                 </a>
@@ -157,7 +157,7 @@ const Projects = () => {
                 <a
                   className="icon"
                   target="_blank"
-                  //href="https://learningcafe.co.in/"
+                  href="https://kiwi-drab.vercel.app"
                 >
                   <BsArrowRight className="link lg:h-8 lg:w-8 2xl:h-9 2xl:w-9 vvs:h-6 vvs:w-6 sm:w-7 sm:h-7 h-5 w-5 hover:-rotate-[45deg] hover:text-white transition duration-200 ease-in-out text-white/90" />
                 </a>
@@ -175,14 +175,14 @@ const Projects = () => {
               </div>
             </h1>
             <p className="font-normal cursor-default font-Glimer-Light text-white/90 xl:text-2xl sm:text-xl 2xl:text-3xl vvs:text-base text-sm">
-              A third-party YouTube video upload automation tool streamlining workflows for remote content creators.
+              A platform for generating audio and thumbnails for podcasts from text inputs using AI.
             </p>
             <div className="btn-row flex justify-start space-x-6 items-center">
               <div className="github-btn">
                 <a
                   className="icon "
                   target="_blank"
-                  //href="https://github.com/tarunfy/Hirely"
+                  href="https://github.com/anubhabrc/Yubi"
                 >
                   <BsGithub className="lg:h-8 lg:w-8 2xl:h-9 2xl:w-9 vvs:h-6 vvs:w-6 sm:w-7 sm:h-7 h-5 w-5 hover:-translate-y-1 transition duration-200  ease-in-out repo text-white/90 hover:text-white" />
                 </a>
@@ -191,7 +191,7 @@ const Projects = () => {
                 <a
                   className="icon"
                   target="_blank"
-                  //href="https://hirely.vercel.app/"
+                  href="https://yubi-lnkn.vercel.app/"
                 >
                   <BsArrowRight className="link lg:h-8 lg:w-8 2xl:h-9 2xl:w-9 vvs:h-6 vvs:w-6 sm:w-7 sm:h-7 h-5 w-5 hover:-rotate-[45deg] hover:text-white transition duration-200 ease-in-out text-white/90" />
                 </a>
