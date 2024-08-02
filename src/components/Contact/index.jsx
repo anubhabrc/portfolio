@@ -3,7 +3,7 @@ import gsap from "gsap";
 import { BsFileEarmarkPdf, BsGithub } from "react-icons/bs";
 import { MdOutlineEmail } from "react-icons/md";
 import { FaLinkedin } from "react-icons/fa";
-import resume from "../../assets/file/resume.pdf";
+//import resume from "../../assets/file/resume.pdf";
 
 const Contact = () => {
   useEffect(() => {
@@ -64,7 +64,7 @@ const Contact = () => {
 
         
 
-        <a href={resume} download={resume}>
+        <a href={"/Anubhab_Roy_Chowdhury_Resume.pdf"} download>
           <button
             id="download-btn"
             className="text-white rounded-full lg:w-fit hover:bg-[#240658] transition duration-500 ease-in-out font-Glimer-Bold font-medium border-[1px] focus:outline-none flex items-center justify-center border-white/50 py-3 px-6 text-lg xl:text-xl 2xl:text-2xl my-10 w-full"
