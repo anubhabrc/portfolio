@@ -1,6 +1,9 @@
 import { useEffect } from "react";
-import Yubi from "../../assets/images/Yubi.png";
-import kiwi from "../../assets/images/kiwi.png";
+import Yubi2 from "../../assets/images/Yubi2.png";
+import Yubi3 from "../../assets/images/Yubi3.png";
+//import Yubi4 from "../../assets/images/Yubi4.png";
+//import Yubi5 from "../../assets/images/Yubi5.png";
+import kiwi2 from "../../assets/images/kiwi2.png";
 import { BsGithub, BsArrowRight } from "react-icons/bs";
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
@@ -126,7 +129,7 @@ const Projects = () => {
         <div className="container lg:space-x-2 flex flex-col lg:flex-row lg:justify-between lg:items-center items-start invisible">
           <div className="lg:h-[400px] 2xl:h-[500px] h-[250px] sm:h-[300px] md:h-[350px] w-full relative overflow-hidden img-wrapper">
             <img
-              src={kiwi}
+              src={kiwi2}
               alt="project image"
               className="absolute w-full object-cover h-full img"
             />
@@ -201,7 +204,7 @@ const Projects = () => {
 
           <div className="lg:h-[400px] 2xl:h-[500px] h-[250px] sm:h-[300px] md:h-[350px] w-full relative overflow-hidden img-wrapper">
             <img
-              src={Yubi}
+              src={Yubi3}
               alt="project image"
               className="absolute w-full object-cover h-full img"
             />
