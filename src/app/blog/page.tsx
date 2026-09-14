@@ -16,11 +16,11 @@ export default function BlogPage() {
           {allBlogItems.map((post) => (
             <article className="blog-row" key={post.title}>
               <div className="blog-main">
-                <h2><Link href={post.href}>{post.title}</Link></h2>
+                <h2><Link href={post.href} data-sound="interaction.tap" data-sound-volume="0.85">{post.title}</Link></h2>
                 <p>{post.description}</p>
                 <div className="blog-date"><CalendarIcon /><span>{post.date}</span></div>
               </div>
-              <Link className="read-more" href={post.href}>Read more <ArrowRightIcon /></Link>
+              <Link className="read-more" href={post.href} data-sound="interaction.tap" data-sound-volume="0.95">Read more <ArrowRightIcon /></Link>
             </article>
           ))}
         </section>

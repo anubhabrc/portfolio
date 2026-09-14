@@ -1,7 +1,13 @@
 import Image from "next/image";
 import Link from "next/link";
 import { site } from "@/data/site";
-import { ArrowRightIcon, CalendarIcon, SocialIcon } from "./icons";
+import {
+  ArrowRightIcon,
+  CalendarIcon,
+  DownloadIcon,
+  LocationIcon,
+  SocialIcon,
+} from "./icons";
 import CopyEmail from "./copy-email";
 
 export default function Home() {
@@ -19,11 +25,43 @@ export default function Home() {
           />
           <div className="hero-copy">
             <h1 id="profile-heading">{site.name}</h1>
-            <p className="hero-meta">
-              {site.headline} <span className="dot">·</span>{" "}
-              <a href={`mailto:${site.email}`}>Email</a>
-              <CopyEmail email={site.email} />
+            <p className="hero-meta">{site.headline}</p>
+          </div>
+        </div>
+
+        <div className="profile-details" aria-label="Profile details">
+          <div className="profile-detail">
+            <p className="profile-detail-label">Location</p>
+            <p className="profile-detail-value">
+              <LocationIcon />
+              <span>{site.location}</span>
             </p>
+          </div>
+
+          <div className="profile-detail profile-detail-email">
+            <p className="profile-detail-label">Email</p>
+            <div className="profile-detail-value">
+              <span className="profile-email-address">{site.email}</span>
+              <CopyEmail
+                email={site.email}
+                icon="copy"
+                className="profile-copy-button"
+              />
+            </div>
+          </div>
+
+          <div className="profile-detail">
+            <p className="profile-detail-label">Resume</p>
+            <a
+              className="profile-resume-link"
+              href="/resume.pdf"
+              download
+              data-sound="interaction.confirm"
+              data-sound-volume="1"
+            >
+              <span>Download</span>
+              <DownloadIcon />
+            </a>
           </div>
         </div>
 
@@ -31,21 +69,40 @@ export default function Home() {
 
         <div className="social-row" aria-label="Social links">
           {site.socials.map((social) => (
-            <a
-              key={social.label}
-              href={social.href}
-              aria-label={social.label}
-              title={social.label}
-              style={{ color: social.color }}
-            >
-              <SocialIcon name={social.icon} />
-            </a>
+            social.icon === "mail" ? (
+              <CopyEmail
+                key={social.label}
+                email={site.email}
+                className="social-email-button"
+                style={{ color: social.color }}
+              />
+            ) : (
+              <a
+                key={social.label}
+                href={social.href}
+                aria-label={social.label}
+                title={social.label}
+                style={{ color: social.color }}
+              >
+                <SocialIcon name={social.icon} />
+              </a>
+            )
           ))}
         </div>
       </section>
 
       <section id="experience" className="section-block">
-        <h2>Experience</h2>
+        <div className="section-heading-row">
+          <h2>Experience</h2>
+          <Link
+            className="read-more section-heading-link"
+            href="/work"
+            data-sound="interaction.tap"
+            data-sound-volume="0.95"
+          >
+            View more <ArrowRightIcon />
+          </Link>
+        </div>
         <div className="experience-list">
           {site.experience.map((item) => (
             <article
@@ -71,11 +128,6 @@ export default function Home() {
             </article>
           ))}
         </div>
-        <div className="center-action">
-          <Link className="outline-button" href="/work">
-            Show all work experiences
-          </Link>
-        </div>
       </section>
 
       <section className="section-block blog-section">
@@ -85,7 +137,7 @@ export default function Home() {
             <article className="blog-row" key={post.title}>
               <div className="blog-main">
                 <h3>
-                  <Link href={post.href}>{post.title}</Link>
+                  <Link href={post.href} data-sound="interaction.tap" data-sound-volume="0.85">{post.title}</Link>
                 </h3>
                 <p>{post.description}</p>
                 <div className="blog-date">
@@ -93,14 +145,14 @@ export default function Home() {
                   <span>{post.date}</span>
                 </div>
               </div>
-              <Link className="read-more" href={post.href}>
+              <Link className="read-more" href={post.href} data-sound="interaction.tap" data-sound-volume="0.95">
                 Read more <ArrowRightIcon />
               </Link>
             </article>
           ))}
         </div>
         <div className="center-action">
-          <Link className="outline-button" href="/blog">
+          <Link className="outline-button" href="/blog" data-sound="interaction.tap">
             Show all blogs
           </Link>
         </div>
@@ -133,11 +185,11 @@ export default function Home() {
         </div>
       </section>
 
-      <blockquote className="quote-card">
+      {/* <blockquote className="quote-card">
         <span className="quote-mark">“</span>
         <p>“{site.quote.text}”</p>
         <cite>– {site.quote.source}</cite>
-      </blockquote>
+      </blockquote> */}
     </div>
   );
 }

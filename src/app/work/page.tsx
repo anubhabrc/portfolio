@@ -1,5 +1,5 @@
 import SiteFrame from '@/components/site-frame';
-import { site, workExperienceDetails } from '@/data/site';
+import { /* site, */ workExperienceDetails } from '@/data/site';
 
 function TechBadge({ name, mark, color, markColor }: { name: string; mark: string; color: string; markColor?: string }) {
   return (
@@ -66,11 +66,11 @@ export default function WorkPage() {
           ))}
         </section>
 
-        <blockquote className="quote-card work-quote-card">
+        {/* <blockquote className="quote-card work-quote-card">
           <span className="quote-mark">“</span>
           <p>“{site.quote.text}”</p>
           <cite>– {site.quote.source}</cite>
-        </blockquote>
+        </blockquote> */}
       </div>
     </SiteFrame>
   );

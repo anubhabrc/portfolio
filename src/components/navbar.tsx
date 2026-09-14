@@ -2,8 +2,9 @@
 
 import Link from 'next/link';
 import { usePathname, useRouter } from 'next/navigation';
-import { useEffect, useMemo, useRef, useState } from 'react';
+import { useCallback, useEffect, useMemo, useRef, useState, useSyncExternalStore } from 'react';
 import { SearchIcon } from './icons';
+import { usePortfolioSound } from './sound-feedback';
 
 const navItems = [
   { label: 'Home', href: '/' },
@@ -22,24 +23,59 @@ const searchItems = [
   { label: 'Personal', description: 'Books, movies and other interests', href: '/#personal' },
 ];
 
+function subscribeToPlatform() {
+  return () => {};
+}
+
+function getPlatformShortcut() {
+  const isApplePlatform = /Macintosh|Mac OS X|MacIntel|iPhone|iPad|iPod/i.test(
+    `${navigator.userAgent} ${navigator.platform}`,
+  );
+
+  return isApplePlatform ? '⌘' : 'Ctrl';
+}
+
+function getServerShortcut() {
+  return '⌘';
+}
+
 export default function Navbar() {
   const pathname = usePathname();
   const router = useRouter();
+  const { play } = usePortfolioSound();
   const [searchOpen, setSearchOpen] = useState(false);
   const [query, setQuery] = useState('');
+  const shortcutModifier = useSyncExternalStore(
+    subscribeToPlatform,
+    getPlatformShortcut,
+    getServerShortcut,
+  );
   const inputRef = useRef<HTMLInputElement>(null);
+
+  const openSearch = useCallback(() => {
+    if (searchOpen) return;
+    play('interaction.toggle', { volume: 0.95 });
+    setSearchOpen(true);
+  }, [play, searchOpen]);
+
+  const closeSearch = useCallback(() => {
+    if (!searchOpen) return;
+    play('interaction.toggle', { volume: 0.85 });
+    setSearchOpen(false);
+  }, [play, searchOpen]);
 
   useEffect(() => {
     const onKeyDown = (event: KeyboardEvent) => {
       if ((event.metaKey || event.ctrlKey) && event.key.toLowerCase() === 'k') {
         event.preventDefault();
-        setSearchOpen((value) => !value);
+        if (searchOpen) closeSearch();
+        else openSearch();
       }
-      if (event.key === 'Escape') setSearchOpen(false);
+      if (event.key === 'Escape') closeSearch();
     };
     window.addEventListener('keydown', onKeyDown);
     return () => window.removeEventListener('keydown', onKeyDown);
-  }, []);
+  }, [closeSearch, openSearch, searchOpen]);
 
   useEffect(() => {
     if (!searchOpen) return;
@@ -56,6 +92,7 @@ export default function Navbar() {
   }, [query]);
 
   const go = (href: string) => {
+    play('interaction.tap');
     setSearchOpen(false);
     setQuery('');
     router.push(href);
@@ -69,7 +106,13 @@ export default function Navbar() {
             {navItems.map((item) => {
               const active = item.href === '/' ? pathname === '/' : pathname.startsWith(item.href);
               return (
-                <Link key={item.href} href={item.href} className={active ? 'nav-link active' : 'nav-link'}>
+                <Link
+                  key={item.href}
+                  href={item.href}
+                  className={active ? 'nav-link active' : 'nav-link'}
+                  data-sound="interaction.tap"
+                  data-sound-volume="0.9"
+                >
                   {item.label}
                 </Link>
               );
@@ -77,24 +120,29 @@ export default function Navbar() {
           </div>
 
           <div className="nav-actions">
-            <button className="search-trigger" onClick={() => setSearchOpen(true)} aria-label="Search this portfolio">
+            <button className="search-trigger" onClick={openSearch} aria-label="Search this portfolio">
               <SearchIcon className="nav-icon" />
               <span className="search-hover-label">Search this portfolio</span>
-              <span className="shortcut"><span>⌘</span><span>K</span></span>
+              <span className="shortcut" aria-hidden="true">
+                <span>{shortcutModifier}</span><span>K</span>
+              </span>
             </button>
           </div>
         </nav>
       </header>
 
       {searchOpen && (
-        <div className="search-backdrop" role="presentation" onMouseDown={() => setSearchOpen(false)}>
+        <div className="search-backdrop" role="presentation" onMouseDown={closeSearch}>
           <section className="search-panel" role="dialog" aria-modal="true" aria-label="Search" onMouseDown={(e) => e.stopPropagation()}>
             <div className="search-input-row">
               <SearchIcon className="search-panel-icon" />
               <input
                 ref={inputRef}
                 value={query}
-                onChange={(e) => setQuery(e.target.value)}
+                onChange={(e) => {
+                  play('interaction.subtle', { volume: 0.72 });
+                  setQuery(e.target.value);
+                }}
                 placeholder="Search pages and sections…"
                 aria-label="Search pages and sections"
               />

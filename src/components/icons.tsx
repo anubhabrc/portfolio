@@ -8,6 +8,7 @@ import {
   RiFileCopyLine,
   RiLinkedinBoxFill,
   RiMailLine,
+  RiMapPinLine,
   RiSearchLine,
   RiTwitterXFill,
 } from "@remixicon/react";
@@ -18,8 +19,16 @@ export function SearchIcon(props: IconProps) {
   return <RiSearchLine aria-hidden="true" {...props} />;
 }
 
+export function MailIcon(props: IconProps) {
+  return <RiMailLine aria-hidden="true" {...props} />;
+}
+
 export function CopyIcon(props: IconProps) {
   return <RiFileCopyLine aria-hidden="true" {...props} />;
+}
+
+export function LocationIcon(props: IconProps) {
+  return <RiMapPinLine aria-hidden="true" {...props} />;
 }
 
 export function CalendarIcon(props: IconProps) {
@@ -48,7 +57,7 @@ export function SocialIcon({ name, ...props }: IconProps & { name: string }) {
       return <RiLinkedinBoxFill {...common} />;
 
     case "mail":
-      return <RiMailLine {...common} />;
+      return <MailIcon {...common} />;
 
     default:
       return <RiCircleLine {...common} />;

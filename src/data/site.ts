@@ -38,7 +38,8 @@ export const site = {
   shortName: "Anubhab",
   url: "https://your-domain.com",
   email: "anubhabrc4work@gmail.com",
-  headline: "Product · AI · Design",
+  location: "Mumbai, India",
+  headline: "Product Curious.",
   bio: "I like making useful things, understanding why people use them, and turning messy ideas into clear products.",
   avatar: "/anubhab.png",
   socials: [

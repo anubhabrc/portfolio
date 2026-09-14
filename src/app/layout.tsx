@@ -1,6 +1,8 @@
 import type { Metadata } from "next";
 import "./globals.css";
 import { site } from "@/data/site";
+import SmoothScroll from "@/components/smooth-scroll";
+import SoundFeedbackProvider from "@/components/sound-feedback";
 
 export const metadata: Metadata = {
   title: `${site.name} — Portfolio`,
@@ -12,7 +14,10 @@ export default function RootLayout({
 }: Readonly<{ children: React.ReactNode }>) {
   return (
     <html lang="en">
-      <body>{children}</body>
+      <body>
+        <SmoothScroll />
+        <SoundFeedbackProvider>{children}</SoundFeedbackProvider>
+      </body>
     </html>
   );
 }

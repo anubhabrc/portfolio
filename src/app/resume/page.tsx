@@ -14,6 +14,8 @@ export default function ResumePage() {
               download
               aria-label="Download resume"
               title="Download resume"
+              data-sound="interaction.confirm"
+              data-sound-volume="1"
             >
               <DownloadIcon />
             </a>
