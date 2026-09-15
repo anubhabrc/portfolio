@@ -61,26 +61,6 @@ export const site = {
       icon: "mail",
       color: "#EA4335",
     },
-
-    // Later:
-    // {
-    //   label: 'Instagram',
-    //   href: '#',
-    //   icon: 'instagram',
-    //   color: '#E4405F',
-    // },
-    // {
-    //   label: 'YouTube',
-    //   href: '#',
-    //   icon: 'youtube',
-    //   color: '#FF0000',
-    // },
-    // {
-    //   label: 'GitHub',
-    //   href: '#',
-    //   icon: 'github',
-    //   color: '#181717',
-    // },
   ],
   experience: [
     {

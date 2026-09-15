@@ -8,13 +8,6 @@ const nav = [
   ["Work", "/work"],
   ["Blog", "/blog"],
   ["Resume", "/resume"],
-  //['Projects', '/work'],
-  // ['Gears', '/#development'],
-  // ['Setup', '/#development'],
-  // ['Notes', '/#development'],
-  // ['Books', '/#personal'],
-  // ['Movies', '/#personal'],
-  // ['RSS FEED', '#'],
 ] as const;
 
 export default function Footer() {
